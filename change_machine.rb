@@ -2,8 +2,12 @@ require 'rspec'
 
 class ChangeMachine
   def change(cents)
-    return [1] if num == 1
-    return [1, 1] if num == 2
+    coins = []
+    while cents > 0
+      cents -= 1
+      coins << 1
+    end
+    coins
   end
 end
 
