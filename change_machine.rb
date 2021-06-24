@@ -34,5 +34,9 @@ RSpec.describe ChangeMachine do
       machine = ChangeMachine.new
       expect(machine.change(6)).to eq([5, 1])
     end
+    it 'should return [10] when given 10' do
+      machine = ChangeMachine.new
+      expect(machine.change(10)).to eq([10])
+    end
   end
 end
