@@ -21,5 +21,9 @@ RSpec.describe ChangeMachine do
       machine = ChangeMachine.new
       expect(machine.change(2)).to eq([1, 1])
     end
+    it 'should return [5] when given 5' do
+      machine = ChangeMachine.new
+      expect(machine.change(5)).to eq([5])
+    end
   end
 end
