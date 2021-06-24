@@ -4,7 +4,9 @@ class ChangeMachine
   def change(cents)
     coins = []
     while cents > 0
-      if cents >= 10
+      if cents >= 25
+        next_coin_to_be_dispensed = 25
+      elsif cents >= 10
         next_coin_to_be_dispensed = 10
       elsif cents >= 5
         next_coin_to_be_dispensed = 5
