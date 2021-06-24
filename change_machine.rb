@@ -5,15 +5,14 @@ class ChangeMachine
     coins = []
     while cents > 0
       if cents >= 10
-        cents -= 10
-        coins << 10
+        next_coin_to_be_dispensed = 10
       elsif cents >= 5
-        cents -= 5
-        coins << 5
+        next_coin_to_be_dispensed = 5
       else
-        cents -= 1
-        coins << 1
+        next_coin_to_be_dispensed = 1
       end
+      cents -= next_coin_to_be_dispensed
+      coins << next_coin_to_be_dispensed
     end
     coins
   end
