@@ -4,7 +4,10 @@ class ChangeMachine
   def change(cents)
     coins = []
     while cents > 0
-      if cents >= 5
+      if cents >= 10
+        cents -= 10
+        coins << 10
+      elsif cents >= 5
         cents -= 5
         coins << 5
       else
