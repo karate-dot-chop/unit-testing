@@ -40,5 +40,9 @@ RSpec.describe ChangeMachine do
       machine = ChangeMachine.new
       expect(machine.change(10)).to eq([10])
     end
+    it 'should return [25] when given 25' do
+      machine = ChangeMachine.new
+      expect(machine.change(25)).to eq([25])
+    end
   end
 end
